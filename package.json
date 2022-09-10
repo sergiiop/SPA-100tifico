@@ -1,0 +1,16 @@
+{
+  "name": "spa-vanilla-100tifico",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Proyecto del curso de platzi para una SPA",
+  "author": "Sergio Pérez <sergio-luis98@hotmail.com>",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.1.0"
+  }
+}
