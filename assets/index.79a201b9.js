@@ -13,9 +13,9 @@
         </a>
       </div>
     </div>
-  `,c="https://rickandmortyapi.com/api/character/",i=async r=>{const e=r?`${c}${r}`:c;try{return await(await fetch(e)).json()}catch(n){console.log("Fetch Error",n)}},u=async()=>`
+  `,i="https://rickandmortyapi.com/api/character/",c=async r=>{const e=r?`${i}${r}`:i;try{return await(await fetch(e)).json()}catch(n){console.log("Fetch Error",n)}},u=async()=>`
     <div class="characters">
-      ${(await i()).results.map(n=>`
+      ${(await c()).results.map(n=>`
         <article class="characters-item">
           <a href="#/${n.id}/">
             <img src="${n.image}" alt="${n.name}" >
@@ -24,7 +24,7 @@
         </article>
       `).join("")}
     </div>
-  `,l=()=>location.hash.slice(1).toLocaleLowerCase().split("/")[1]||"/",p=async()=>{const r=l(),e=await i(r);return`
+  `,l=()=>location.hash.slice(1).toLocaleLowerCase().split("/")[1]||"/",p=async()=>{const r=l(),e=await c(r);return`
     <div class="characters-inner">
       <article class="character-card">
         <h2>${e.name}</h2>
@@ -43,4 +43,4 @@
     <div class="error">
       <h2>Error 404</h2>
     </div>
-  `,f=r=>r.length<=3?r==="/"?r:"/:id":`/${r}`,v={"/":u,"/:id":p,"/contact":"Contact"},d=async()=>{var a;const r=document.getElementById("header"),e=document.getElementById("content");r.innerHTML=await h();let n=l(),s=await f(n),t=(a=v[s])!=null?a:m;e.innerHTML=await t()};window.addEventListener("load",d);window.addEventListener("hashchange",d);console.log("hello");
+  `,f=r=>r.length<=3?r==="/"?r:"/:id":`/${r}`,v={"/":u,"/:id":p,"/contact":"Contact"},d=async()=>{var a;const r=document.getElementById("header"),e=document.getElementById("content");r.innerHTML=await h();let n=l(),s=await f(n),t=(a=v[s])!=null?a:m;e.innerHTML=await t()};window.addEventListener("load",d);window.addEventListener("hashchange",d);
