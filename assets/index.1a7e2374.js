@@ -2,7 +2,7 @@
     <div class="header-main">
       <div class="header-logo">
         <h1>
-          <a href="/">
+          <a href="/SPA-100tifico">
             100tifi.co
           </a>
         </h1>
@@ -39,8 +39,8 @@
         <h3>Last Location: <span>${e.location.name}</span></h3>
       </article>
     </div>
-  `},m=()=>`
+  `},f=()=>`
     <div class="error">
       <h2>Error 404</h2>
     </div>
-  `,f=r=>r.length<=3?r==="/"?r:"/:id":`/${r}`,v={"/":u,"/:id":p,"/contact":"Contact"},d=async()=>{var a;const r=document.getElementById("header"),e=document.getElementById("content");r.innerHTML=await h();let n=l(),s=await f(n),t=(a=v[s])!=null?a:m;e.innerHTML=await t()};window.addEventListener("load",d);window.addEventListener("hashchange",d);
+  `,m=r=>r.length<=3?r==="/"?r:"/:id":`/${r}`,v={"/":u,"/:id":p,"/contact":"Contact"},d=async()=>{var a;const r=document.getElementById("header"),e=document.getElementById("content");r.innerHTML=await h();let n=l(),s=await m(n),t=(a=v[s])!=null?a:f;e.innerHTML=await t()};window.addEventListener("load",d);window.addEventListener("hashchange",d);
